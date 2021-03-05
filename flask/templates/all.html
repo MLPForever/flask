@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Library
+{% endblock %}
+
+{% block body %}
+<h2>All books</h2>
+<div class="container-fluid">
+    {% for i in library %}
+    <div class="container-fluid">
+        <p>{{ i.id }}</p>
+        <p>{{ i.text }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class='container-fluid'>
+    <h3>Home</h3>
+    <a class="btn btn-warning" href="/">Return</a>
+</div>
+{% endblock %}

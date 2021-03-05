@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Library
+{% endblock %}
+
+{% block body %}
+<div class = 'container-fluid'>
+    <h3>Get list of books</h3>
+    <a class="btn btn-warning" href="/library/all">GET all books</a>
+</div>
+
+<div class='container-fluid'>
+    <h3>Get book</h3>
+    <form method="post">
+        <input type="text" name="id" id="id" class="form_control" placeholder="Name of books" />
+        <input type="submit" class="btn btn-warning" value="Get book" />
+    </form>
+</div>
+{% endblock %}
