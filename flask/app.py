@@ -44,10 +44,12 @@ def library():
 @app.route('/add', methods = ['POST', 'GET'])
 def add():
     if request.method == 'POST':
-        id = request.form['id']
+        #id = request.form['id']
         text = request.form['text']
 
-        library = Library(id=id, text=text)
+        library = Library.query.all()
+        id = len(library)+1
+        library = Library(id=id, text=text)       
 
         try:
             db.session.add(library)
